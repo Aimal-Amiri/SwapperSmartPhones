@@ -1,0 +1,84 @@
+{
+    "iphone": [
+        {
+            "id": 1,
+            "name": "iphone 16 Pro Max",
+            "model": "Max",
+            "img": "/images/product-images/iphone-tab/iphone16-proMax.jpg",
+            "storage": 128,
+            "color": "Black",
+            "amount": 100,
+            "price": 1700
+        },
+        {
+            "id": 2,
+            "name": "iphone 16 Pro",
+            "model": "Pro",
+            "img": "/images/product-images/iphone-tab/iphone16-pro.jpg",
+            "storage": 256,
+            "color": "Gold",
+            "amount": 100,
+            "price": 1600
+        },
+        {
+            "id": 3,
+            "name": "iphone 15 Pro Max",
+            "model": "Max",
+            "img": "/images/product-images/iphone-tab/iphone15-proMax.jpg",
+            "storage": 256,
+            "color": "Silver",
+            "amount": 100,
+            "price": 1300
+        },
+        {
+            "id": 4,
+            "name": "iphone 15 Pro",
+            "model": "Pro",
+            "img": "/images/product-images/iphone-tab/iphone15-pro.jpg",
+            "storage": 256,
+            "color": "Black",
+            "amount": 100,
+            "price": 1200
+        },
+        {
+            "id": 5,
+            "name": "iphone 12 Pro Max",
+            "model": "Max",
+            "img": "/images/product-images/iphone-tab/iphone12-proMax.jpg",
+            "storage": 128,
+            "color": "Gold",
+            "amount": 100,
+            "price": 1100
+        },
+        {
+            "id": 6,
+            "name": "iphone 12 Pro",
+            "model": "Pro",
+            "img": "/images/product-images/iphone-tab/iphone12-pro.jpg",
+            "storage": 256,
+            "color": "Silver",
+            "amount": 100,
+            "price": 1000
+        },
+        {
+            "id": 7,
+            "name": "iphone 11 Pro Max",
+            "model": "Max",
+            "img": "/images/product-images/iphone-tab/iphone11-proMax.jpg",
+            "storage": 128,
+            "color": "Green",
+            "amount": 100,
+            "price": 900
+        },
+        {
+            "id": 8,
+            "name": "iphone 11 Pro",
+            "model": "Pro",
+            "img": "/images/product-images/iphone-tab/iphone11-pro.jpg",
+            "storage": 128,
+            "color": "Gold",
+            "amount": 100,
+            "price": 800
+        }
+    ]
+}
