@@ -126,6 +126,8 @@ class DataManager {
 
     // Save products to localStorage
     saveProducts() {
+        console.log(this.products);
+
         const data = { iphone: this.products.map(p => p.toJSON()) };
         localStorage.setItem('products', JSON.stringify(data));
     }
@@ -157,6 +159,7 @@ class DataManager {
     // @param {Product} product
     addProduct(product) {
         this.products.push(product);
+        console.log(product);
         this.saveProducts();
     }
 
