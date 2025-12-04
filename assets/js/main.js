@@ -1,6 +1,6 @@
 // Initialize class instances
 const dataManager = new DataManager();
-const uiRenderer = new MainUIRenderer();
+const uiRenderer = new UIRenderer();
 const filterManager = new FilterManager();
 const cartManager = new CartManager(dataManager, uiRenderer);
 

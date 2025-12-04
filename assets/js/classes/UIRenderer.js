@@ -1,6 +1,6 @@
-// MainUIRenderer class handles all DOM creation and manipulation
+// UIRenderer class handles all DOM creation and manipulation
 // Responsible for rendering products, cart items, and UI components
-class MainUIRenderer {
+class UIRenderer {
     constructor() {
         this.rowParent = document.getElementById('row-parent');
         this.shoppingContainer = document.getElementById('shoping-container');
@@ -19,7 +19,6 @@ class MainUIRenderer {
 
     createProductCard(product) {
         if (!this.rowParent) return;
-        console.log(product);
 
         const parentContainer = document.createElement('div');
         parentContainer.setAttribute('id', `${product.id}`);
