@@ -84,10 +84,10 @@ class ProductEditor {
         if (product) {
             product.name = formData.name;
             product.model = formData.model;
-            product.storage = formData.storage;
+            product.storage = parseInt(formData.storage);
             product.color = formData.color;
-            product.amount = formData.amount;
-            product.price = formData.price;
+            product.amount = parseInt(formData.amount);
+            product.price = parseFloat(formData.price);
             this.handleImageUpload(product);
         }
     }

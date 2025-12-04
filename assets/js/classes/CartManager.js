@@ -66,8 +66,7 @@ class CartManager {
         const cartItems = this.dataManager.getCartItems();
         this.uiRenderer.renderCartItems(cartItems);
         this.updateCartDisplay();
-        this.attachCartEventL
-        isteners();
+        this.attachCartEventListeners();
     }
 
     attachCartEventListeners() {

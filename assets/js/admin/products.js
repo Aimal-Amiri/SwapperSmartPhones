@@ -39,6 +39,11 @@ function handleRemoveBtn(event) {
  */
 function handleSave() {
     productEditor.saveProduct();
+    const modalElement = document.getElementById('productModal');
+    const modal = bootstrap.Modal.getInstance(modalElement);
+    if (modal) {
+        modal.hide();
+    }
     initializeApp();
 }
 
