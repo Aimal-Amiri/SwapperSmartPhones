@@ -60,52 +60,95 @@ class UIRenderer {
 
         const cardContainer = document.createElement('div');
         cardContainer.setAttribute('id', `cart-item-${item.id}`);
-        cardContainer.classList.add('card', 'mb-3');
+        cardContainer.classList.add('card', 'mb-3', 'shadow-sm', 'border-0', 'cart-item-card');
 
         const row = document.createElement('div');
-        row.classList.add('row', 'g-0');
+        row.classList.add('row', 'g-0', 'align-items-center');
 
+        // Image wrapper with better styling
         const imgWrapper = document.createElement('div');
-        imgWrapper.classList.add('col-md-4');
+        imgWrapper.classList.add('col-5', 'col-md-4', 'col-lg-3', 'p-2', 'p-md-3');
 
         const img = document.createElement('img');
-        img.classList.add('img-fluid', 'rounded-start');
+        img.classList.add('img-fluid', 'rounded-2');
         img.src = item.img;
 
+        imgWrapper.appendChild(img);
+
+        // Body wrapper with improved spacing
         const cardBodyWrapper = document.createElement('div');
-        cardBodyWrapper.classList.add('col-md-8');
+        cardBodyWrapper.classList.add('col-7', 'col-md-8', 'col-lg-9', 'ps-2', 'ps-md-3', 'pe-2', 'pe-md-3', 'py-3');
 
-        const { cardBody, cardTitle, cardText } = this.createCardBody(item);
+        const { cardBody, cardTitle, cardText } = this.createCartItemBody(item);
 
-        // Create quantity control
-        const quantityDiv = document.createElement('div');
-        quantityDiv.classList.add('mb-2', 'd-flex', 'align-items-center', 'gap-2');
+        // Create quantity and action container
+        const controlsDiv = document.createElement('div');
+        controlsDiv.classList.add('d-flex', 'align-items-center', 'justify-content-between', 'gap-2', 'mt-3', 'flex-wrap');
+
+        // Quantity control with styling
+        const quantityControlDiv = document.createElement('div');
+        quantityControlDiv.classList.add('d-flex', 'align-items-center', 'gap-2');
 
         const quantityLabel = document.createElement('label');
-        quantityLabel.classList.add('form-label', 'mb-0');
+        quantityLabel.classList.add('form-label', 'mb-0', 'fw-semibold', 'text-dark', 'small');
         quantityLabel.innerText = 'Qty:';
+        quantityLabel.setAttribute('for', `cart-quantity-${item.id}`);
 
         const quantityInput = document.createElement('input');
         quantityInput.type = 'number';
         quantityInput.min = '1';
         quantityInput.max = '50';
         quantityInput.value = item.quantity || 1;
-        quantityInput.classList.add('form-control', 'form-control-sm');
-        quantityInput.style.width = '70px';
+        quantityInput.classList.add('form-control', 'form-control-sm', 'border');
         quantityInput.setAttribute('data-type', 'cart-quantity');
         quantityInput.setAttribute('data-product-id', item.id);
+        quantityInput.id = `cart-quantity-${item.id}`;
 
-        quantityDiv.append(quantityLabel, quantityInput);
+        quantityControlDiv.append(quantityLabel, quantityInput);
+
+        // Total price display
+        const totalPrice = document.createElement('div');
+        totalPrice.classList.add('fw-bold', 'fs-6');
+        totalPrice.innerHTML = `€<span class="cart-item-total">${((item.price * (item.quantity || 1)).toFixed(2))}</span>`;
 
         // Remove button
-        const removeBtn = this.createButton(item.id, 'fa-trash', 'removeFromCart');
+        const removeBtn = this.createCartButton(item.id, 'fa-trash', 'removeFromCart');
 
-        cardBody.append(cardTitle, cardText, quantityDiv, removeBtn);
-        imgWrapper.appendChild(img);
+        controlsDiv.append(quantityControlDiv, totalPrice, removeBtn);
+        cardBody.append(cardTitle, cardText, controlsDiv);
         cardBodyWrapper.appendChild(cardBody);
         row.append(imgWrapper, cardBodyWrapper);
         cardContainer.appendChild(row);
         this.shoppingContainer.appendChild(cardContainer);
+    }
+
+    createCartItemBody(product) {
+        const cardBody = document.createElement('div');
+        cardBody.classList.add('card-body', 'p-0');
+
+        const cardTitle = document.createElement('h6');
+        cardTitle.classList.add('card-title', 'mb-1', 'fw-bold', 'text-dark');
+        cardTitle.innerText = product.name;
+
+        const cardText = document.createElement('p');
+        cardText.classList.add('card-text', 'mb-0', 'text-dark');
+        cardText.innerHTML = `<span>€${product.price}</span> |${product.storage}GB |${product.color}`;
+
+        return { cardBody, cardTitle, cardText };
+    }
+
+    createCartButton(id, iconClass, actionType) {
+        const btn = document.createElement('button');
+        btn.classList.add('btn', 'btn-sm', 'buttons', 'ms-auto');
+        btn.setAttribute('data-id', id);
+        btn.setAttribute('data-action', actionType);
+        btn.title = 'Remove from cart';
+
+        const icon = document.createElement('i');
+        icon.classList.add('fa-solid', iconClass);
+        btn.appendChild(icon);
+
+        return btn;
     }
 
     createCardBody(product) {
@@ -157,6 +200,24 @@ class UIRenderer {
                 this.shoppingCartElement.style.marginTop = '0';
             }
             this.notificationElement.textContent = '';
+        }
+    }
+
+    updateCartItem(productId, quantity, newTotal) {
+        const container = document.getElementById(`cart-item-${productId}`);
+        if (!container) return;
+
+        // Update quantity input value
+        const qtyInput = container.querySelector(`#cart-quantity-${productId}`) || container.querySelector('input[data-type="cart-quantity"]');
+        if (qtyInput) {
+            qtyInput.value = quantity;
+        }
+
+        // Update total price display for this item
+        const totalEl = container.querySelector('.cart-item-total');
+        if (totalEl) {
+            const n = Number(newTotal) || 0;
+            totalEl.textContent = n.toFixed(2);
         }
     }
 
