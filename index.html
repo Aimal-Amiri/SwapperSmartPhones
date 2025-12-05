@@ -49,22 +49,19 @@
             </div>
             <!--collapsable-container end-->
             <!--right side-container start-->
-            <div class="d-flex align-items-center gap-1">
-                <a role="button" class="text-dark shopping-cart d-flex align-items-center text-decoration-none"
-                    aria-label="Shopping Cart" data-bs-toggle="offcanvas" data-bs-target="#shoping-cart">
-                    <div class="d-none rounded-circle text-center" id="notification">
+            <div class="d-flex align-items-center">
+                <a role="button" class="text-dark me-2 shopping-cart text-decoration-none" aria-label="Shopping Cart" data-bs-toggle="offcanvas" data-bs-target="#shoping-cart">
+                    <div class="d-none rounded-circle text-center text-white" id="notification">
                     </div>
-                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                    <i class="fas fa-shopping-cart"></i>
                 </a>
                 <div class="dropdown">
-                    <a class="d-flex align-items-center" id="navbarDropdownMenuAvatar" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <img src="./assets/images/home-images/admin-avatar.jpg" alt="admin-avatar"
-                            class="rounded-circle" height="30" loading="lazy">
+                    <a class="d-flex align-items-center" id="navbarDropdownMenuAvatar" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="./assets/images/home-images/admin-avatar.jpg" alt="admin-avatar" class="rounded-circle" height="25"
+                            loading="lazy">
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end fs-6" aria-labelledby="navbarDropdownMenuAvatar">
-                        <li><a role="button" class="dropdown-item" id="admin-login" data-bs-toggle="modal"
-                                data-bs-target="#loginModal">Login</a></li>
+                        <li><a role="button" class="dropdown-item" id="admin-login" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a></li>
                         <li><a role="button" class="dropdown-item" id="admin-logout">Logout</a></li>
                     </ul>
                 </div>

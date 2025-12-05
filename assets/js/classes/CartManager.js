@@ -58,7 +58,15 @@ class CartManager {
             // Update cart item quantity
             cartItem.quantity = newQuantity;
             this.dataManager.saveCartItems();
-            this.renderCart();
+
+            // Update only the changed cart item in the UI to avoid re-render blinking
+            const newTotal = parseFloat((cartItem.price * cartItem.quantity).toFixed(2));
+            if (this.uiRenderer && typeof this.uiRenderer.updateCartItem === 'function') {
+                this.uiRenderer.updateCartItem(productId, cartItem.quantity, newTotal);
+            }
+
+            // update notification / totals
+            this.updateCartDisplay();
         }
     }
 
