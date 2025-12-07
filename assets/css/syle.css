@@ -278,7 +278,6 @@ body {
     border-radius: 0.5rem;
     border: 1px solid #dee2e6;
     padding: 5px;
-    width: 60px;
 }
 
 .form-control:focus {
@@ -372,14 +371,6 @@ body {
 .cart-item-card:hover img {
     transform: scale(1.08);
 }
-
-/* .cart-item-card .card-title {
-    color: #000 !important;
-}
-
-.cart-item-card .card-text {
-    color: #000 !important;
-} */
 
 .cart-item-card .form-control-sm {
     border-color: #d0d0d0;
