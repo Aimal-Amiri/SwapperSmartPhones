@@ -128,8 +128,7 @@ body {
 }
 
 .div-size {
-    min-height: 343px;
-    min-width: 255px;
+    width: 300px;
     margin: 4px 0;
 }
 
@@ -240,6 +239,7 @@ body {
 .card {
     border-radius: 0.75rem;
     transition: box-shadow 0.3s ease-in-out;
+    padding: 5px;
 }
 
 .card:hover {
@@ -393,6 +393,15 @@ body {
     height: 230px;
     object-fit: cover;
     border-radius: 0.75rem;
+}
+
+.about-card {
+    width: 56px;
+    height: 56px;
+}
+
+.comments {
+    resize: none;
 }
 
 @media (max-width: 767px) {

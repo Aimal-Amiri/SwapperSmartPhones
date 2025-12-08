@@ -22,10 +22,10 @@ class UIRenderer {
 
         const parentContainer = document.createElement('div');
         parentContainer.setAttribute('id', `${product.id}`);
-        parentContainer.classList.add('col-sm-12', 'col-md-3', 'py-md-2', 'div-size');
+        parentContainer.classList.add('col-sm-12', 'col-md-2', 'py-md-2', 'div-size');
 
         const wrapper = document.createElement('div');
-        wrapper.classList.add('d-flex', 'flex-column', 'mt-2', 'mt-md-0');
+        wrapper.classList.add('d-flex', 'flex-column', 'mt-2', 'mt-md-0', 'align-items-center');
         wrapper.style.height = '100%';
 
         const cardContainer = document.createElement('div');
