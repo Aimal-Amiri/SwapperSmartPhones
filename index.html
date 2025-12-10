@@ -192,6 +192,20 @@
                 </div>
             </div>
             <!-- order confirmation toast end -->
+            <!-- order empty toast start -->
+            <div aria-live="assertive" aria-atomic="true" class="d-flex justify-content-center align-items-center w-100">
+                <div id="empty-cart-toast" class="toast bg-danger text-white" role="alert" aria-live="assertive"
+                    aria-atomic="true">
+                    <div class="toast-header">
+                        <strong class="me-auto">Cart Empty!</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Your cart is empty. Please add items to your cart before placing an order.
+                    </div>
+                </div>
+            </div>
+            <!-- order empty toast end -->
         </div>
         <!-- canvas shoping cart end -->
         <!-- canvas sort start -->
@@ -277,76 +291,78 @@
         </div>
     </main>
     <footer>
-            <footer class="bg-white border-top mt-3 mt-md-0">
-        <div class="container-md py-4">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 border-bottom py-2">
-                <div class="col">
-                    <h5 class="fw-bold">Discover iPhone</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a class="text-dark text-decoration-none" href="#">All iPhone models</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">iPhone 16 Pro</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">iPhone 16</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">iPhone 15</a></li>
-                    </ul>
+        <footer class="bg-white border-top mt-3 mt-md-0">
+            <div class="container-md py-4">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 border-bottom py-2">
+                    <div class="col">
+                        <h5 class="fw-bold">Discover iPhone</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="text-dark text-decoration-none" href="#">All iPhone models</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">iPhone 16 Pro</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">iPhone 16</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">iPhone 15</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="fw-bold">Shop iPhone</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="text-dark text-decoration-none" href="#">Shop iPhone</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">Accessories for iPhone</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">Apple Trade In</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="fw-bold">More iPhone</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><a class="text-dark text-decoration-none" href="#">Support for iPhone</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">AppleCare+ for iPhone</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">iOS 18</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">iPhone en privacy</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">iCloud+</a></li>
+                            <li><a class="text-dark text-decoration-none" href="#">Apple Pay</a></li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <h5 class="fw-bold">Contact & Social</h5>
+                        <address class="mb-2 small text-muted">
+                            Muntinglaan 3<br>
+                            Groningen 9611<br>
+                            <a href="mailto:swapper@outlook.com"
+                                class="text-decoration-none">swapper@outlook.com</a><br>
+                            <a href="tel:067930520" class="text-decoration-none">067930520</a>
+                        </address>
+                        <div>
+                            <a href="#" class="text-dark me-2" aria-label="facebook link"><i
+                                    class="fab fa-facebook fa-lg"></i></a>
+                            <a href="#" class="text-dark me-2" aria-label="twitter link"><i
+                                    class="fab fa-twitter fa-lg"></i></a>
+                            <a href="#" class="text-dark me-2" aria-label="instagram link"><i
+                                    class="fab fa-instagram fa-lg"></i></a>
+                            <a href="#" class="text-dark me-2" aria-label="whatsapp link"><i
+                                    class="fab fa-whatsapp fa-lg"></i></a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <h5 class="fw-bold">Shop iPhone</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a class="text-dark text-decoration-none" href="#">Shop iPhone</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">Accessories for iPhone</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">Apple Trade In</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5 class="fw-bold">More iPhone</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a class="text-dark text-decoration-none" href="#">Support for iPhone</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">AppleCare+ for iPhone</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">iOS 18</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">iPhone en privacy</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">iCloud+</a></li>
-                        <li><a class="text-dark text-decoration-none" href="#">Apple Pay</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5 class="fw-bold">Contact & Social</h5>
-                    <address class="mb-2 small text-muted">
-                        Muntinglaan 3<br>
-                        Groningen 9611<br>
-                        <a href="mailto:swapper@outlook.com" class="text-decoration-none">swapper@outlook.com</a><br>
-                        <a href="tel:067930520" class="text-decoration-none">067930520</a>
-                    </address>
-                    <div>
-                        <a href="#" class="text-dark me-2" aria-label="facebook link"><i
-                                class="fab fa-facebook fa-lg"></i></a>
-                        <a href="#" class="text-dark me-2" aria-label="twitter link"><i
-                                class="fab fa-twitter fa-lg"></i></a>
-                        <a href="#" class="text-dark me-2" aria-label="instagram link"><i
-                                class="fab fa-instagram fa-lg"></i></a>
-                        <a href="#" class="text-dark me-2" aria-label="whatsapp link"><i
-                                class="fab fa-whatsapp fa-lg"></i></a>
+                <div class="row mt-1">
+                    <div class="col-12 text-center small text-muted mt-3">&copy; 2025 Swapper. All rights reserved.
                     </div>
                 </div>
             </div>
-            <div class="row mt-1">
-                <div class="col-12 text-center small text-muted mt-3">&copy; 2025 Swapper. All rights reserved.</div>
-            </div>
-        </div>
-    </footer>
-    <!-- Class definitions -->
-    <script src="./assets/js/classes/Product.js"></script>
-    <script src="./assets/js/classes/DataManager.js"></script>
-    <script src="./assets/js/classes/FilterManager.js"></script>
-    <script src="./assets/js/classes/UIRenderer.js"></script>
-    <script src="./assets/js/classes/CartManager.js"></script>
-    <script src="./assets/js/classes/ProductSortManager.js"></script>
-    <!-- Application files -->
-    <script src="./assets/js/auth/login.js"></script>
-    <script src="./assets/js/main.js"></script>
-    <!-- Bootstrap js file -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+        </footer>
+        <!-- Class definitions -->
+        <script src="./assets/js/classes/Product.js"></script>
+        <script src="./assets/js/classes/DataManager.js"></script>
+        <script src="./assets/js/classes/FilterManager.js"></script>
+        <script src="./assets/js/classes/UIRenderer.js"></script>
+        <script src="./assets/js/classes/CartManager.js"></script>
+        <script src="./assets/js/classes/ProductSortManager.js"></script>
+        <!-- Application files -->
+        <script src="./assets/js/auth/login.js"></script>
+        <script src="./assets/js/main.js"></script>
+        <!-- Bootstrap js file -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -231,6 +231,14 @@ class UIRenderer {
         }
     }
 
+    showEmptyCartToast() {
+        const toastElement = document.getElementById('empty-cart-toast');
+        if (toastElement) {
+            const toast = new window.bootstrap.Toast(toastElement);
+            toast.show();
+        }
+    }
+
     clearCartDisplay() {
         if (this.shoppingContainer) {
             this.shoppingContainer.innerHTML = '';

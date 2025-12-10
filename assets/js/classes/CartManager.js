@@ -119,6 +119,11 @@ class CartManager {
 
     checkout() {
         const cartItems = this.dataManager.getCartItems();
+        if (cartItems.length === 0) {
+            this.uiRenderer.showEmptyCartToast();
+            return [];
+        }
+
         const orders = JSON.parse(localStorage.getItem('orders')) || [];
 
         // Create order entries with quantities
