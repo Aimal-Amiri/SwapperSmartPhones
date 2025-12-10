@@ -127,11 +127,6 @@ body {
     background-color: rgb(234, 190, 107);
 }
 
-.div-size {
-    width: 300px;
-    margin: 4px 0;
-}
-
 .card-body {
     text-overflow: ellipsis;
     white-space: nowrap;

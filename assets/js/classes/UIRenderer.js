@@ -22,7 +22,7 @@ class UIRenderer {
 
         const parentContainer = document.createElement('div');
         parentContainer.setAttribute('id', `${product.id}`);
-        parentContainer.classList.add('col-sm-12', 'col-md-2', 'py-md-2', 'div-size');
+        parentContainer.classList.add('col-sm-12', 'col-md-4', 'col-lg-3', 'py-md-2', 'mt-2', 'mt-md-0');
 
         const wrapper = document.createElement('div');
         wrapper.classList.add('d-flex', 'flex-column', 'mt-2', 'mt-md-0', 'align-items-center');
@@ -174,6 +174,8 @@ class UIRenderer {
 
         if (iconClass === null) {
             btn.innerText = 'Add to cart';
+            btn.setAttribute('data-bs-toggle', 'offcanvas');
+            btn.setAttribute('data-bs-target', '#shoping-cart');
         } else {
             const icon = document.createElement('i');
             icon.classList.add('fa-solid', iconClass);
