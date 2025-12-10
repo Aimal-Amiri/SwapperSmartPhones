@@ -13,4 +13,4 @@ Deze functionaliteiten zijn alleen toegankelijk via een beheerdersauthenticatie.
 ## Hoe gaat je webshop eruitzien?
 Ik probeer de webshop zo veel mogelijk op het prototype te laten lijken. Het prototype is de eerste inspiratiebron en is in Figma gemaakt om een beeld te krijgen van hoe de UI van de webshop ontwikkeld moet worden.
 
-In het README-bestand wordt een link naar het prototype geplaatst, zodat het ontwerp bekeken kan worden. Echter, tijdens de ontwikkelingsfase kunnen er extra wijzigingen worden doorgevoerd, waardoor het eindproduct enigszins kan afwijken van het prototype. Het is mogelijk dat ik tijdens het ontwikkelingsproces extra inspiratie opdoe van andere websites.
+In het docs map is een afbeelding van het prototype geplaatst, zodat het ontwerp bekeken kan worden. Echter, tijdens de ontwikkelingsfase kunnen er extra wijzigingen worden doorgevoerd, waardoor het eindproduct enigszins kan afwijken van het prototype. Het is mogelijk dat ik tijdens het ontwikkelingsproces extra inspiratie opdoe van andere websites.
