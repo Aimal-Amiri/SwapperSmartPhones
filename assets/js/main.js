@@ -26,6 +26,7 @@ async function initializeApp() {
 function handleAddClick(event) {
     event.preventDefault();
     const id = parseInt(event.target.closest('button').dataset.id);
+
     cartManager.addToCart(id);
 }
 

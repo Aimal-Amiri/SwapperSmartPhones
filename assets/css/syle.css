@@ -127,12 +127,6 @@ body {
     background-color: rgb(234, 190, 107);
 }
 
-.div-size {
-    min-height: 343px;
-    min-width: 255px;
-    margin: 4px 0;
-}
-
 .card-body {
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -240,6 +234,7 @@ body {
 .card {
     border-radius: 0.75rem;
     transition: box-shadow 0.3s ease-in-out;
+    padding: 5px;
 }
 
 .card:hover {
@@ -278,7 +273,6 @@ body {
     border-radius: 0.5rem;
     border: 1px solid #dee2e6;
     padding: 5px;
-    width: 60px;
 }
 
 .form-control:focus {
@@ -373,14 +367,6 @@ body {
     transform: scale(1.08);
 }
 
-/* .cart-item-card .card-title {
-    color: #000 !important;
-}
-
-.cart-item-card .card-text {
-    color: #000 !important;
-} */
-
 .cart-item-card .form-control-sm {
     border-color: #d0d0d0;
     font-size: 0.9rem;
@@ -402,6 +388,15 @@ body {
     height: 230px;
     object-fit: cover;
     border-radius: 0.75rem;
+}
+
+.about-card {
+    width: 56px;
+    height: 56px;
+}
+
+.comments {
+    resize: none;
 }
 
 @media (max-width: 767px) {
